@@ -19,4 +19,6 @@ Omzettingsscripts, .flac-bestanden en resulterende .mp3-bestanden worden gewaarm
  * bash
  * lame
  * shntool
+ * rsync
+ * sha1sum
  * de standaard linux opdrachten
