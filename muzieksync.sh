@@ -7,10 +7,11 @@
 	
 	GEBRUIK :
 	$ bash muzieksync.sh brondirectory doeldirectory
-	b.v. voor hele collectie :
-		$ bash muzieksync.sh /media/sdata/muziek /media/western/muziek
-	b.v. voor nieuwe cd :
-		$ bash muzieksync.sh /media/sdata/muziek/nieuwecd /media/ramdisk
+	b.v. hele collectie synchroniseren :
+		$ bash muzieksync.sh ~/muziek /media/mp3player
+	b.v. een nieuwe cd in de muziekbibliotheek ook toevoegen aan de mp3-collectie :
+		$ mkdir -p /media/mp3player/nieuwecd
+		$ bash muzieksync.sh ~/muziek/nieuwecd /media/mp3player/nieuwecd
 _
 #####################
 ## TE DOEN
@@ -114,7 +115,7 @@ _
 testrsync=""	
 #testrsync="-v -n --list-only "
 
-## gebruiken ${sha1} als checksum, zou qua cpu-gebruik beetje sneller zijn dan md5
+## gebruik ${checksom}sum als checksum, sha1sum zou qua cpu-gebruik een beetje sneller zijn dan md5sum
 ## alternatieven md5, sha1, sha256, sha224, sha384, sha512
 checksom=sha1
 
